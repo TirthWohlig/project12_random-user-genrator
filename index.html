@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>User</title>
+    <title> Random User Genrator </title>
 </head>
 
 <body>
     <div id="app">
-        <img v-on:click="getUser()" :class="finalResult.gender" :src="finalResult.picture"
-            :alt="`${finalResult.name} ${finalResult.name}`">
-        <h1>{{finalResult.name}}</h1>
+
+        <img :class="finalResult.gender" :src="finalResult.picture.large"
+            :alt="`${finalResult.name.first} ${finalResult.name.last}`">
+        <h1>{{finalResult.name.title}} {{finalResult.name.first}} {{finalResult.name.last}}</h1>
         <h3>Email: {{finalResult.email}}</h3>
-        <h3>Age: {{finalResult.dob}} </h3>
+        <h3>Age: {{finalResult.dob.age}}</h3>
         <h3>Phone: {{finalResult.phone}}</h3>
         <button :class="finalResult.gender" v-on:click="getUser()">Get Random User</button>
     </div>
-
     <script src="https://unpkg.com/vue@3.0.5"></script>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 
-</html> 
+</html>
